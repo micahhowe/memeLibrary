@@ -6,8 +6,8 @@ const memeCtrl = require('./memeCtrl')
 app.use(express.json())
 
 app.get('/api/random', memeCtrl.getAllRandom)
-app.post('/api/memes', memeCtrl.addMeme)
-app.delete('/api/memes/:id', memeCtrl.deleteMeme)
-app.put('/api/memes/:id', memeCtrl.updateMeme)
+// app.post('/api/memes', memeCtrl.addRandom)
+// app.delete('/api/memes/:id', memeCtrl.deleteMeme)
+// app.put('/api/memes/:id', memeCtrl.updateMeme)
 
 app.listen(PORT, () => console.log(`${PORT} deep fried memes`))

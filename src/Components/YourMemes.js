@@ -1,5 +1,5 @@
 import React, {Component} from 'react'
-import Meme from './Meme'
+//import Meme from './Meme'
 
 export default class YourMemes extends Component {
     render() {
