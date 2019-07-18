@@ -1,6 +1,15 @@
 .App {
   text-align: center;
 }
-*{
-  background: darkslategrey;
+body{
+  background: darkgrey;
+}
+input {
+  width: 300px;
+}
+.meme-counter{
+  text-align:left;
+}
+.your-memes {
+  text-align:left;
 }
