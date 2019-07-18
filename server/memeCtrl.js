@@ -1,4 +1,5 @@
 const yourMemes = []
+const cageMemes = require('./cage')
 //add the variable that holds the value of the text input
 //let memeUrl =
 
