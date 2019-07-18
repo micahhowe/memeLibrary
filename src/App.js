@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {Component} from 'react';
 import './App.css';
 import Header from '../src/Components/Header'
 import ImgInput from '../src/Components/ImgInput'
@@ -6,7 +6,15 @@ import YourMemes from '../src/Components/YourMemes'
 import MemeCounter from '../src/Components/MemeCounter'
 import Footer from '../src/Components/Footer'
 
-function App() {
+class App extends Component {
+  constructor() {
+    super()
+
+    this.state = {
+      memeArray: []
+    }
+  }
+  render(){
   return (
     <div className="App">
       <body>
@@ -18,6 +26,7 @@ function App() {
       </body>
     </div>
   );
+  }
 }
 
 export default App;
