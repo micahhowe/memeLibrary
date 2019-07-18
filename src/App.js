@@ -6,25 +6,26 @@ import YourMemes from '../src/Components/YourMemes'
 import MemeCounter from '../src/Components/MemeCounter'
 import Footer from '../src/Components/Footer'
 
+
 class App extends Component {
   constructor() {
     super()
 
     this.state = {
-      memeArray: []
+      memeArray: [1,],
+      ImgValue: ''
     }
     
   }
+  
   render(){
   return (
     <div className="App">
-      <body>
         <Header />
         <ImgInput />
         <MemeCounter />
-        <YourMemes />
+        <YourMemes memeArray={this.state.memeArray} />
         <Footer />
-      </body>
     </div>
   );
   }

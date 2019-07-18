@@ -1,71 +1,18 @@
 import React, {Component} from 'react'
 const axios = require('axios')
-const cageArr = [
-{
-    id: 1,
-    img:
-      'https://cdn.wallpapersafari.com/55/32/pZUArx.jpg'
-  },
-  {
-    id: 2,
-    img:
-      'https://i.etsystatic.com/11942812/d/il/7506d3/1826896845/il_340x270.1826896845_rqq0.jpg?version=0'
-  },
-  {
-    id: 3,
-    img:
-      'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ1OI9U7vm_noQcTjCXhf8cgKmScXs24iROk_ncNhKG5-OPtRcixw'
-  },
-  {
-    id: 4,
-    img:
-      'https://i.kym-cdn.com/photos/images/original/000/456/353/05a.jpg'
-  },
-  {
-    id: 5,
-    img:
-      'https://americaswhiteboy.com/wp-content/uploads/2014/06/Nicolas-Cage-Mona-Lisa-face-funny-comedy-hilarious-weird-strange.jpg'
-  },
-  {
-    id: 6,
-    img:
-      'https://wallpaperset.com/w/full/c/9/9/137695.jpg'
-  },
-  {
-    id: 7,
-    img:
-      'https://www.dhresource.com/0x0s/f2-albu-g9-M00-B6-57-rBVaWFwfL8-AAGHRAAFzv4CFxVU135.jpg/fashion-funny-nicolas-cage-rage-newest-men.jpg'
-  },
-  {
-    id: 8,
-    img:
-      'https://www.wonderfulterrible.com/wp-content/uploads/2018/10/Nicolas-Cage-portrait-cushion-cover.jpg'
-  },
-  {
-    id: 9,
-    img:
-      'https://nctakecontrol.com/wp-content/uploads/2018/09/new-100-dollar-bill-unique-nicholas-cage-funny-money-hundred-dollar-bills-stickers-image-of-new-100-dollar-bill.jpg'
-  },
-  {
-    id: 10,
-    img:
-      'https://i.pinimg.com/originals/bd/04/10/bd0410f39132799ebdf8ad4dbb765c5f.jpg'
-  }
-]
+
 const rand1 = Math.ceil(Math.random() * 10)
 
 
 export default class ImgInput extends Component {
     constructor() {
     super()
-        this.state = {
-          imgValue: '',
-        }
+        
     }
-        handleChange(e) {
-            this.setState({ imgValue: e.target.value })
-            console.log(e.target.value)
-        }
+    handleChange(e) {
+        this.setState({ imgValue: e.target.value })
+        console.log(e.target.value)
+    }
         //i have no idea to push the random image to the array let alone do it from the server
     render() {
         
@@ -74,7 +21,7 @@ export default class ImgInput extends Component {
                 <span>Insert Image URL</span>
                 <input onChange={e => this.handleChange(e)} type='text' placeholder='Make sure this is a full URL' />
                 <button>Add Meme</button>
-                <button onClick={() => }>Add Random Meme</button>
+                <button>Add Random Meme</button>
             </div>
         )
     }

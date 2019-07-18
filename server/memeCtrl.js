@@ -1,11 +1,12 @@
 const yourMemes = []
-const cageMemes = require('./cage')
+const cageMemes = require('./cage.json')
 //add the variable that holds the value of the text input
 //let memeUrl =
 
+
 module.exports = {
     getAllRandom(req, res) {
-      res.status(200).send('textTEST')
+      res.status(200).send(cageMemes)
     },
     addMeme(req, res) {
       yourMemes.push({...req.body, id})

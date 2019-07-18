@@ -1,7 +1,17 @@
 import React, {Component} from 'react'
-//import Meme from './Meme'
+import Meme from './Meme'
 
 export default class YourMemes extends Component {
+    constructor(props) {
+        super(props)
+        this.state = {
+            imgValue: '',
+          }
+        }
+              handleChange(e) {
+                this.setState({ imgValue: e.target.value })
+                console.log(e.target.value)
+            }
     render() {
         return (
             <div className="your-memes">
@@ -13,12 +23,13 @@ export default class YourMemes extends Component {
                     <img src="https://image.shutterstock.com/image-vector/default-ui-image-placeholder-wireframes-260nw-1037719192.jpg"></img>
                     <button>Edit</button>
                     <button>Delete</button>
-                    {/* {this.props.memeArray.map(el => (
+                    {this.props.memeArray.map(el => (
                         <Meme
-                        key={el.id} 
+                        image={this.state.imgValue}
+                        key={el.id} //this needs an id but im not sure where to put that
                         data={el} 
                         />
-          ))} */}
+          ))} 
                 </div>
             </div>
         )

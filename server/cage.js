@@ -2,18 +2,11 @@ const axios = require('axios')
 
 
 module.exports = {
-  getPokemon(req, res) {
-    const cageArr = []
+  addCage(req, res) {
     const rand1 = Math.ceil(Math.random() * 10)
-    axios.get(`https://pokeapi.co/api/v2/pokemon/${rand1}`).then(result => {
-      cageArr.push(result.data)
-      axios.get(`https://pokeapi.co/api/v2/pokemon/${rand2}`).then(result => {
-      cageArr.push(result.data)
-        axios.get(`https://pokeapi.co/api/v2/pokemon/${rand3}`).then(result => {
-          cageArr.push(result.data)
-          res.status(200).send(cageArr)
-        })
-      })
+    axios.get(`/api/random/${rand1}`).then(result => {
+      this.state.memeArray.push(result.data)
+      console.log(memeArray)
     })
   }
 }
