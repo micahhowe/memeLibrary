@@ -27,7 +27,7 @@ module.exports = {
       res.status(200).send(allMemes)
     },
     updateMeme(req, res) {
-        console.log(req.body)
+        //console.log(req.body)
         const {id} = req.params
         const {img} = req.body
         const index = allMemes.findIndex(meme => (

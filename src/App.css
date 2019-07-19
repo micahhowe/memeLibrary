@@ -2,7 +2,8 @@
   text-align: center;
 }
 body{
-  background: darkgrey;
+  background: black;
+  color:white;
 }
 input {
   width: 300px;

@@ -1,5 +1,4 @@
 import React, {Component} from 'react'
-const axios = require('axios')
 let cageMemes = [
     {
         img:
@@ -69,8 +68,8 @@ export default class ImgInput extends Component {
       }
     
     handleChange(e) {
-        if(e.target.value.length < 6 || e.target.value == '') {
-            const rand1 = Math.ceil(Math.random() * 10)
+        if(e.target.value.length < 6 || e.target.value === '') {
+            const rand1 = Math.ceil(Math.random() * 9)
             this.setState({imgValue: cageMemes[rand1].img})
             //this.setState({imgValue: 'https://cdn.wallpapersafari.com/55/32/pZUArx.jpg'})
         }else
@@ -81,7 +80,7 @@ export default class ImgInput extends Component {
         
         return (
             <div className="Insert-Image">
-                <span>Insert Image URL</span>
+                <span>Insert Image URL: </span>
                 <input onChange={e => this.handleChange(e)} type='text' placeholder='URL' />
                 {/* I am going to want to push the imgValue to my memeArray on an object with an id */}
                 <button onClick={() => this.addMeme()}>Add Meme</button>
