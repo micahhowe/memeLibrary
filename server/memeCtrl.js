@@ -15,9 +15,9 @@ module.exports = {
       res.status(200).send(cageMemes)
     },
     addMeme(req, res) {
-      memeArray.push({...req.body, id})
+      allMemes.push({...req.body, id})
       id++
-      res.status(200).send(memeUrl)
+      res.status(200).send(allMemes)
     },
     deleteMeme(req, res) {
       const {id} = req.params

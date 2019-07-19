@@ -24,8 +24,9 @@ export default class YourMemes extends Component {
                     {this.props.memeArray.map(el => (
                         <Meme
                         image={el.img}
-                        key={el.index} //this needs an id but im not sure where to put that
+                        key={el.id} //this needs an id but im not sure where to put that
                         data={el.name} 
+                        delete={el.deleteMeme}
                         />
           ))} 
                 </div>

@@ -5,12 +5,22 @@ const rand1 = Math.ceil(Math.random() * 10)
 
 
 export default class ImgInput extends Component {
-    constructor() {
-    super()
+    constructor(props) {
+    super(props)
         
     this.state = {
         imgValue: ''
       }
+    }
+    addMeme() {
+        const body = {
+          img: this.state.imgValue,
+        }
+        this.props.addMemeBtn(body)
+        //this.setState({ toggle: true })
+      }
+    deleteMeme(){
+        
     }
     handleChange(e) {
         this.setState({ imgValue: e.target.value })
@@ -24,7 +34,7 @@ export default class ImgInput extends Component {
                 <span>Insert Image URL</span>
                 <input onChange={e => this.handleChange(e)} type='text' placeholder='Make sure this is a full URL' />
                 {/* I am going to want to push the imgValue to my memeArray on an object with an id */}
-                <button>Add Meme</button>
+                <button onClick={() => this.addMeme()}>Add Meme</button>
                 {/* The onClick needs to be an arrow function so it doesn't immediately run */}
                 <button onClick={() => alert('string')}>Add Random Meme</button>
             </div>

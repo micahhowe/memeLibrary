@@ -8,6 +8,7 @@ app.use(express.json())
 app.get('/api/memes', memeCtrl.getMemeArray)
 app.get('/api/random/:id', memeCtrl.getAllRandom)
 app.post('/api/memes', memeCtrl.addMeme)
+//^^this will add a meme and hopefully my random meme as well
 //delete is now working correctly to delete a particular id
 app.delete('/api/memes/:id', memeCtrl.deleteMeme)
 app.put('/api/memes/:id', memeCtrl.updateMeme)
