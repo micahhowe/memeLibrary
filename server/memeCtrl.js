@@ -20,7 +20,6 @@ module.exports = {
       res.status(200).send(allMemes)
     },
     deleteMeme(req, res) {
-        console.log('test7',req.params)
       const {id} = req.params
       const index = allMemes.findIndex(meme => (
         meme.id === parseInt(id)

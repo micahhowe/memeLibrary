@@ -20,20 +20,18 @@ class App extends Component {
     this.deleteMeme = this.deleteMeme.bind(this)
   }
   addMeme(body) {
-    axios.post('/api/memes', body).then(res => {
+    axios.post('/api/meme', body).then(res => {
       this.setState({memeArray: res.data})
     })
   }
   deleteMeme(id) {
-    console.log(id)
     axios.delete(`/api/meme/${id}`).then(res => {
       this.setState({memeArray: res.data})
     })
   }
   // Ideally this componentDidMount will always bring reset the array based off of its current state
   componentDidMount() {
-    axios.get('/api/memes').then(res => {
-      console.log('test6', res)
+    axios.get('/api/meme').then(res => {
       this.setState({
         memeArray: res.data
       })

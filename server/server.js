@@ -5,12 +5,12 @@ const memeCtrl = require('./memeCtrl')
 
 app.use(express.json())
 
-app.get('/api/memes', memeCtrl.getMemeArray)
+app.get('/api/meme', memeCtrl.getMemeArray)
 app.get('/api/random/:id', memeCtrl.getAllRandom)
-app.post('/api/memes', memeCtrl.addMeme)
+app.post('/api/meme', memeCtrl.addMeme)
 //^^this will add a meme and hopefully my random meme as well
 //delete is now working correctly to delete a particular id
 app.delete('/api/meme/:id', memeCtrl.deleteMeme)
-app.put('/api/memes/:id', memeCtrl.updateMeme)
+app.put('/api/meme/:id', memeCtrl.updateMeme)
 
 app.listen(PORT, () => console.log(`${PORT} deep fried memes`))
