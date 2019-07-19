@@ -10,7 +10,7 @@ app.get('/api/random/:id', memeCtrl.getAllRandom)
 app.post('/api/memes', memeCtrl.addMeme)
 //^^this will add a meme and hopefully my random meme as well
 //delete is now working correctly to delete a particular id
-app.delete('/api/memes/:id', memeCtrl.deleteMeme)
+app.delete('/api/meme/:id', memeCtrl.deleteMeme)
 app.put('/api/memes/:id', memeCtrl.updateMeme)
 
 app.listen(PORT, () => console.log(`${PORT} deep fried memes`))

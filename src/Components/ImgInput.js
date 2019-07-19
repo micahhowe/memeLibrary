@@ -19,9 +19,7 @@ export default class ImgInput extends Component {
         this.props.addMemeBtn(body)
         //this.setState({ toggle: true })
       }
-    deleteMeme(){
-        
-    }
+    
     handleChange(e) {
         this.setState({ imgValue: e.target.value })
         //console.log(e.target.value) // I was using this to showcase the onchange 

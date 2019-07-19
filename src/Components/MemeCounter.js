@@ -6,7 +6,7 @@ export default class YourMemes extends Component {
         super(props)
 
         this.state ={
-            test: 5
+            val: this.props.memeArray.length
         }
     }
     render() {
@@ -14,7 +14,7 @@ export default class YourMemes extends Component {
             <div className="meme-counter">
                 {/* add the state value instead of the static number */}
                 {/* This will need to be a state instead of just the length value of memeArray, but it is currently working */}
-               <h2>Meme Counter: {this.props.memeArray.length}</h2>
+               <h2>Meme Counter: {this.state.val}</h2>
 
             </div>
         )
