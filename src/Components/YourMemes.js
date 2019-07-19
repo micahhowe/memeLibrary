@@ -20,14 +20,12 @@ export default class YourMemes extends Component {
                 </div>
                 <div className="meme-library">
                     {/* we will be creating a new reusable component similar to the pokemon from yesterday */}
-                    <img src="https://image.shutterstock.com/image-vector/default-ui-image-placeholder-wireframes-260nw-1037719192.jpg"></img>
-                    <button>Edit</button>
-                    <button>Delete</button>
+                    {/* This map will allow us to access data from the memeArray on state within app.js */}
                     {this.props.memeArray.map(el => (
                         <Meme
-                        image={this.state.imgValue}
-                        key={el.id} //this needs an id but im not sure where to put that
-                        data={el} 
+                        image={el.img}
+                        key={el.index} //this needs an id but im not sure where to put that
+                        data={el.name} 
                         />
           ))} 
                 </div>

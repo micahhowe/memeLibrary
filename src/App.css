@@ -10,6 +10,11 @@ input {
 .meme-counter{
   text-align:left;
 }
-.your-memes {
-  text-align:left;
+
+.meme-library {
+  display:flex;
+  justify-content: space-evenly;
+  /* This flex direction was super useful to get them to appear on a horizontal row */
+  flex-direction:row;
+  flex-wrap: wrap;
 }

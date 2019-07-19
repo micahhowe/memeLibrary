@@ -2,11 +2,19 @@ import React, {Component} from 'react'
 
 export default class YourMemes extends Component {
     //add a state here that keeps track of the number
+    constructor(props) {
+        super(props)
+
+        this.state ={
+            test: 5
+        }
+    }
     render() {
         return (
             <div className="meme-counter">
                 {/* add the state value instead of the static number */}
-               <h2>Meme Counter: 1</h2>
+                {/* This will need to be a state instead of just the length value of memeArray, but it is currently working */}
+               <h2>Meme Counter: {this.props.memeArray.length}</h2>
 
             </div>
         )
