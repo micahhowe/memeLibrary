@@ -1,4 +1,3 @@
-const yourMemes = []
 // how to I make sure that all the memes get sent in getmemearray
 const cageMemes = require('./cage.json')
 const allMemes = require('./allMemes.js')
@@ -28,6 +27,7 @@ module.exports = {
       res.status(200).send(allMemes)
     },
     updateMeme(req, res) {
+        console.log(req.body)
         const {id} = req.params
         const {img} = req.body
         const index = allMemes.findIndex(meme => (

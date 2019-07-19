@@ -6,7 +6,7 @@ const memeCtrl = require('./memeCtrl')
 app.use(express.json())
 
 app.get('/api/meme', memeCtrl.getMemeArray)
-app.get('/api/random/:id', memeCtrl.getAllRandom)
+//app.get('/api/random/:id', memeCtrl.getAllRandom) //I should be able to do this without the server
 app.post('/api/meme', memeCtrl.addMeme)
 //^^this will add a meme and hopefully my random meme as well
 //delete is now working correctly to delete a particular id

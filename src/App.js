@@ -18,9 +18,16 @@ class App extends Component {
     }
     this.addMeme = this.addMeme.bind(this)
     this.deleteMeme = this.deleteMeme.bind(this)
+    this.updateMeme = this.updateMeme.bind(this)
   }
   addMeme(body) {
     axios.post('/api/meme', body).then(res => {
+      this.setState({memeArray: res.data})
+    })
+  }
+  updateMeme(id, body) {
+    console.log('test2',body)
+    axios.put(`/api/meme/${id}`, body).then(res => {
       this.setState({memeArray: res.data})
     })
   }
@@ -43,7 +50,7 @@ class App extends Component {
         <Header />
         <ImgInput addMemeBtn={this.addMeme}/>
         <MemeCounter memeArray={this.state.memeArray} />
-        <YourMemes memeArray={this.state.memeArray} deleteMemeBtn={this.deleteMeme} />
+        <YourMemes memeArray={this.state.memeArray} deleteMemeBtn={this.deleteMeme} updateMemeBtn ={this.updateMeme} />
         <Footer />
     </div>
   );

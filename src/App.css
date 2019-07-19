@@ -7,8 +7,9 @@ body{
 input {
   width: 300px;
 }
+
 .meme-counter{
-  text-align:left;
+  text-align:center;
 }
 
 .meme-library {
@@ -18,6 +19,14 @@ input {
   flex-direction:row;
   flex-wrap: wrap;
 }
-.meme-library > img {
-  max-width:300px;
+img {
+  max-width: 300px;
+}
+.footer{
+  display:flex;
+  flex-direction:column;
+  justify-content: flex-end;
+}
+.footer > img {
+  max-width:50px;
 }
