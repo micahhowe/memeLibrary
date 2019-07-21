@@ -42,7 +42,6 @@ export default class Meme extends Component {
         )}
                    
                  </div>
-                 {/* Replace these 2 with the specific components intended for this purpose */}
                     <button onClick={() => this.props.deleteMemeBtn(this.props.id)}>
           Delete
         </button>

@@ -1,10 +1,10 @@
 const data = [
     {
-        img: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQU7bdeHKEEVzWrv2b97iBgdGq76RNRwO7xP8NyRSga9ZAIjny1',
+        img: 'https://i.redd.it/00nyozt7yh021.png',
         id:1
     },
     {
-        img: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQU7bdeHKEEVzWrv2b97iBgdGq76RNRwO7xP8NyRSga9ZAIjny1',
+        img: 'https://i.kym-cdn.com/photos/images/newsfeed/001/217/711/afd.jpg_large',
         id: 2
     }
 ]
