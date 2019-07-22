@@ -19,10 +19,17 @@ class App extends Component {
     this.addMeme = this.addMeme.bind(this)
     this.deleteMeme = this.deleteMeme.bind(this)
     this.updateMeme = this.updateMeme.bind(this)
+    this.alertIt = this.alertIt.bind(this)
   }
   addMeme(body) {
     axios.post('/api/meme', body).then(res => {
       this.setState({memeArray: res.data})
+    })
+  }
+  alertIt(id) {
+    axios.get(`/api/meme/${id}`).then(res => {
+      console.log(res.data)
+      alert(res.data.img)
     })
   }
   //This will allow me to update the meme after passing down this function to the child component
@@ -55,7 +62,11 @@ class App extends Component {
         <Header />
         <ImgInput addMemeBtn={this.addMeme}/>
         <MemeCounter memeArray={this.state.memeArray} />
-        <YourMemes memeArray={this.state.memeArray} deleteMemeBtn={this.deleteMeme} updateMemeBtn ={this.updateMeme} />
+        <YourMemes
+        memeArray={this.state.memeArray} 
+        deleteMemeBtn={this.deleteMeme} 
+        updateMemeBtn ={this.updateMeme} 
+        alertIt = {this.alertIt}/>
         <Footer />
     </div>
   );

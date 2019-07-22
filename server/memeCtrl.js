@@ -9,9 +9,12 @@ module.exports = {
     getMemeArray(req, res) {
         res.status(200).send(allMemes)
     },
-    // I need to create the controller for allmemes that brings in the memeArray
-    getAllRandom(req, res) {
-      res.status(200).send(cageMemes)
+    alertIt(req, res) {
+        const {id} = req.params
+        const memeFound = allMemes.findIndex(meme => (
+            meme.id === parseInt(id)
+        ))
+      res.status(200).send(allMemes[memeFound])
     },
     addMeme(req, res) {
       allMemes.push({...req.body, id})

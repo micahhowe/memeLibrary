@@ -27,7 +27,7 @@ export default class Meme extends Component {
         return (
             <div className="meme">
                 <div className="img">
-                <img src={this.props.image} alt="Funny Meme" />
+                <img src={this.props.image} alt="Funny Meme" onClick={() => this.props.alertIt(this.props.id)}/>
                 </div>
                 <div className="button">
                 {/* This 'change' has been destructured right after the render above */}

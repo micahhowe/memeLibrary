@@ -6,7 +6,8 @@ const memeCtrl = require('./memeCtrl')
 app.use(express.json())
 
 app.get('/api/meme', memeCtrl.getMemeArray)
-//app.get('/api/random/:id', memeCtrl.getAllRandom) //I should be able to do this without the server
+//I added this get below to access the img link from axios as a third parameter requirement
+app.get('/api/meme/:id', memeCtrl.alertIt)
 app.post('/api/meme', memeCtrl.addMeme)
 //^^this will add a meme to the array
 //delete is now working correctly to delete a particular id

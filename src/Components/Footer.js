@@ -3,10 +3,10 @@ import MultipleImg from './MultipleImg'
 
 export default function Footer() {
   return (
-    <div className="footer">
+    <footer className="footer">
       <MultipleImg />
       <h3>¯\_(ツ)_/¯</h3>
       <MultipleImg />
-    </div>
+    </footer>
   )
 }

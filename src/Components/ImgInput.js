@@ -67,7 +67,13 @@ export default class ImgInput extends Component {
         this.props.addMemeBtn(body)
         //this.setState({ toggle: true })
       }
-    
+      alertIt() {
+        const body = {
+          img: this.state.imgValue,
+        }
+        this.props.addRandomBtn(body)
+        //this.setState({ toggle: true })
+      }
     handleChange(e) {
         if(e.target.value.length < 8 || e.target.value === '') {
             const rand1 = Math.ceil(Math.random() * 9)
@@ -85,6 +91,7 @@ export default class ImgInput extends Component {
                 {/* I am going to want to push the imgValue to my memeArray on an object with an id */}
                 <button onClick={() => this.addMeme()}>Add Meme</button>
                 {/* The onClick needs to be an arrow function so it doesn't immediately run */}
+                <button onClick={() => this.addRandom()}>Random</button>
             </div>
         )
     }

@@ -28,6 +28,7 @@ export default class YourMemes extends Component {
                         key={el.id} 
                         deleteMemeBtn={this.props.deleteMemeBtn}
                         updateMemeBtn={this.props.updateMemeBtn}
+                        alertIt={this.props.alertIt}
                         />
           ))} 
                 </div>
