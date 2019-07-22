@@ -9,6 +9,7 @@ module.exports = {
     getMemeArray(req, res) {
         res.status(200).send(allMemes)
     },
+    // this is a server function that will send back the id that matches what was clicked
     alertIt(req, res) {
         const {id} = req.params
         const memeFound = allMemes.findIndex(meme => (

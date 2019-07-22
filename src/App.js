@@ -26,9 +26,10 @@ class App extends Component {
       this.setState({memeArray: res.data})
     })
   }
+  //This function snatched the image url from axios in order to be returned in the function inside memeCtrl.js
   alertIt(id) {
     axios.get(`/api/meme/${id}`).then(res => {
-      console.log(res.data)
+      //console.log(res.data)
       alert(res.data.img)
     })
   }
