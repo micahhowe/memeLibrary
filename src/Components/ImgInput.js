@@ -91,7 +91,7 @@ export default class ImgInput extends Component {
                 {/* I am going to want to push the imgValue to my memeArray on an object with an id */}
                 <button onClick={() => this.addMeme()}>Add Meme</button>
                 {/* The onClick needs to be an arrow function so it doesn't immediately run */}
-                <button onClick={() => this.addRandom()}>Random</button>
+                
             </div>
         )
     }
