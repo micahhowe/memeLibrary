@@ -25,8 +25,9 @@ class App extends Component {
       this.setState({memeArray: res.data})
     })
   }
+  //This will allow me to update the meme after passing down this function to the child component
   updateMeme(id, body) {
-    console.log('test2',body)
+    //console.log('test2',body)
     axios.put(`/api/meme/${id}`, body).then(res => {
       this.setState({memeArray: res.data})
     })
@@ -36,7 +37,7 @@ class App extends Component {
       this.setState({memeArray: res.data})
     })
   }
-  // Ideally this componentDidMount will always bring reset the array based off of its current state
+  // Ideally this componentDidMount will always bring the array based off of its current state
   componentDidMount() {
     axios.get('/api/meme').then(res => {
       this.setState({

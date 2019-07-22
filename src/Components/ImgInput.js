@@ -68,7 +68,7 @@ export default class ImgInput extends Component {
       }
     
     handleChange(e) {
-        if(e.target.value.length < 6 || e.target.value === '') {
+        if(e.target.value.length < 8 || e.target.value === '') {
             const rand1 = Math.ceil(Math.random() * 9)
             this.setState({imgValue: cageMemes[rand1].img})
             //this.setState({imgValue: 'https://cdn.wallpapersafari.com/55/32/pZUArx.jpg'})
@@ -77,7 +77,6 @@ export default class ImgInput extends Component {
         //console.log(e.target.value) // I was using this to showcase the onchange 
     }
     render() {
-        
         return (
             <div className="Insert-Image">
                 <span>Insert Image URL: </span>

@@ -22,13 +22,16 @@ export default class Meme extends Component {
       }
     //add a state here that keeps track of the number
     render() {
+        let { change } = this.state
+        let { deleteMemeBtn } = this.props
         return (
             <div className="meme">
                 <div className="img">
                 <img src={this.props.image} alt="Funny Meme" />
                 </div>
                 <div className="button">
-                {this.state.change ? (
+                {/* This 'change' has been destructured right after the render above */}
+                {change ? (
           <div>
             <input
               type="text"
@@ -42,7 +45,8 @@ export default class Meme extends Component {
         )}
                    
                  </div>
-                    <button onClick={() => this.props.deleteMemeBtn(this.props.id)}>
+                 {/* This 'deleteMemeBtn' has been destructured right after the render above */}
+                    <button onClick={() => deleteMemeBtn(this.props.id)}>
           Delete
         </button>
             </div>

@@ -28,6 +28,7 @@ input {
 .meme{
   margin: 0 5px 15px 5px;
 }
+
 img {
   max-width: 300px;
   max-height: 400px;
@@ -41,5 +42,5 @@ img {
   display:flex;
   flex-direction:column;
   justify-content: flex-end;
-  margin-top:25vh;
+  margin-top:20vh;
 }
