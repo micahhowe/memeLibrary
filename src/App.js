@@ -35,6 +35,8 @@ class App extends Component {
   deleteMeme(id) {
     axios.delete(`/api/meme/${id}`).then(res => {
       this.setState({memeArray: res.data})
+    }).catch(function() {
+      console.log('could not delete meme');
     })
   }
   // Ideally this componentDidMount will always bring the array based off of its current state
@@ -43,6 +45,8 @@ class App extends Component {
       this.setState({
         memeArray: res.data
       })
+    }).catch(function() {
+      console.log('meme not found'); // "oh, no!"
     })
   }
   render(){
