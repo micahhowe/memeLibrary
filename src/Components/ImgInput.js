@@ -1,4 +1,5 @@
 import React, {Component} from 'react'
+//import cages from './cage.js'
 let cageMemes = [
     {
         img:
