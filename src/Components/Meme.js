@@ -1,5 +1,5 @@
 import React, {Component} from 'react'
-
+let inputStyle = {width:'110px'}
 export default class Meme extends Component {
     constructor(props) {
         super(props)
@@ -20,8 +20,8 @@ export default class Meme extends Component {
         this.props.updateMemeBtn(this.props.id, {img: this.state.val} )
         this.toggleChange()
       }
-    //add a state here that keeps track of the number
     render() {
+        // These destructure statements work because they snatch the value in {} off the object and make that its own variable
         let { change } = this.state
         let { deleteMemeBtn } = this.props
         return (
@@ -33,8 +33,9 @@ export default class Meme extends Component {
                 {/* This 'change' has been destructured right after the render above */}
                 {change ? (
           <div>
-            <input
-              type="text"
+              
+            <input style={inputStyle}
+              type="text" placeholder='URL'
               onChange={e => this.handleChange(e)}
             />
             <button onClick={() => this.update()}>Save</button>
